@@ -1,0 +1,10 @@
+<h1>Users</h1>
+
+<%= form_with scope: 'users',
+              url: import_users_path,
+              data: { controller: 'user-import', action: 'submit->user-import#import' } do |form| %>
+  <%= form.file_field :file,
+                      required: true,
+                      accept: 'text/csv' %>
+  <%= form.submit 'Import' %>
+<% end %>
