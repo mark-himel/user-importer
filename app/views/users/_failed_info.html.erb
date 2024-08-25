@@ -1,0 +1,10 @@
+<% if count.present? && !count.zero? %>
+  <h3><%= t('users.errors.failed_import_count', count: count) %></h3>
+<% end %>
+<% if !errors.nil? && errors.any? %>
+  <ul>
+    <% errors.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
