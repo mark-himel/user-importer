@@ -10,6 +10,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem 'pg', '~> 1.5', '>= 1.5.6'
+gem 'bcrypt', '~> 3.1.7'
 
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
