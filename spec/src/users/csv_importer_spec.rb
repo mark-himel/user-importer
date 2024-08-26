@@ -40,4 +40,13 @@ describe Users::CsvImporter do
       expect(service_instance.errors).to contain_exactly 'No record found'
     end
   end
+
+  context 'with file having invalid headers' do
+    let(:path) { Rails.root.join('spec/support/files/invalid_columns.csv') }
+
+    it 'fails to import and stores the error message' do
+      service_instance.import
+      expect(service_instance.errors).to contain_exactly 'Wrong headers. Valid headers are ["name", "password"]'
+    end
+  end
 end

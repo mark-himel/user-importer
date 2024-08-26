@@ -1,15 +1,11 @@
 <h1>Users</h1>
-<%= turbo_frame_tag 'users-import-form' do %>
-  <%= form_with scope: 'users',
-                url: import_users_path,
-                data: { controller: 'user-import', action: 'submit->user-import#import' } do |form| %>
-    <%= form.file_field :file,
-                        required: true,
-                        accept: 'text/csv' %>
-    <%= form.submit 'Import' %>
-  <% end %>
-  <div id="success-info">
-  </div>
-  <div id="failed-info">
-  </div>
+<%= form_with scope: 'users',
+              url: import_users_path,
+              data: { controller: 'user-import', action: 'submit->user-import#import' } do |form| %>
+  <%= form.file_field :file,
+                      required: true,
+                      accept: 'text/csv' %>
+  <%= form.submit 'Import' %>
 <% end %>
+<%= render 'success_info', count: nil %>
+<%= render 'failed_info', count: nil, errors: nil %>

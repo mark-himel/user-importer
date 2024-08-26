@@ -7,3 +7,4 @@ en:
       no_record: 'No record found'
       import_row_failure: 'Row %{row} failed to import because %{error}'
       failed_import_count: '%{count} rows were failed to import.'
+      invalid_headers: 'Wrong headers. Valid headers are %{headers}'
