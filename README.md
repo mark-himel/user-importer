@@ -12,3 +12,7 @@ An app to import users from uploading a csv file.
 
 * Run `rspec` in the terminal to run all spec files
 * All spec files are located in the `/spec` directory
+
+## Demo
+
+![demo_gif](https://github.com/user-attachments/assets/8751df4e-685c-4d78-a644-c26b8076c0bc)
